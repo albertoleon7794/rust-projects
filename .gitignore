@@ -9,3 +9,5 @@ guessing_game/**/*.rs.bk
 
 # MSVC Windows builds of rustc produce these, which store debugging information
 guessing_game/**/*.pdb
+guessing_game/target/debug/.fingerprint/
+guessing_game/target/debug/deps/
