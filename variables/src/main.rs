@@ -1,27 +1,65 @@
 fn main() {
-let x: i32 = 5;
-println!("The value of x is:  {} ", x); 
-let x = "six";   
-println!("The value of x is:  {} ", x); 
 
-const SUBSCRIBER_COUNT: u32 = 100_000;
+// let number = 11;
 
-//Integers
-//Floating-point Integers
-//Booleans
-//Char
-
+// if number < 10 {
+//     println!("first condition was true");
+// } else if number < 22 {
+//     println!("second condition was true");
+// } else {
+//     println!("condition was false");
+// }
 
 
-//array
-let error_codes = [404, 500, 503];
-let not_found = error_codes[0];
-// let x = error_codes[3]; 
+// let condition = true;
+// let number = if condition {5} else {6};
 
-let tup = ("Hello this is a test", 100_000);
-let sub_count = tup.1;
-let (text, number) = tup; 
+// println!("number: {}", number);
+// let mut counter = 0;
+
+// let result = loop {
+//     counter += 1;
+//     println!("Counter: {}", counter);
+//     if counter == 10 {
+//         break counter;
+//     }
+// };
 
 
-println!("tup {:?}", tup);
+// println!("final result: {}", result);
+
+
+//While loops
+// let mut number = 3;
+
+// while number != 0 {
+//     println!("{}!", number);
+
+//     number -= 1;
+// }
+// println!("LIFTOFF!");
+
+// For end loop
+
+let a = [10, 20, 30, 40, 50];
+
+for element in a.iter() {
+    println!("the value is: {}", element);
+}
+
+for number in 1..4 {
+    println!("{}", number);
+}
+
+
+
+
+
+}
+
+fn my_function(x: i32, y:i32) -> i32 {
+    println!("The value of x is: {}", x);
+    println!("The value of y is: {}", y);
+    x + y
+
 }
