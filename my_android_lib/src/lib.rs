@@ -1,14 +1,13 @@
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
-}
+extern crate jni;
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+use jni::JNIEnv;
+use jni::objects::JClass;
+use jni::sys::jstring;
+use std::ffi::CString;
 
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
+#[no_mangle]
+pub extern "C" fn Java_com_example_rustintegrationapp_MyRustLib_hello_1from_1rust(env: JNIEnv, _: JClass) -> jstring {
+    let output = CString::new("This message was build from Rust!").unwrap();
+    let jni_string = env.new_string(output.to_str().unwrap()).unwrap();
+    jni_string.into_raw()
 }
