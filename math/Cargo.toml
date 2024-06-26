@@ -1,0 +1,19 @@
+[package]
+name = "math"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+uniffi = { version = "0.28.0",  features = ["cli"] }
+
+[build-dependencies]
+uniffi = { version = "0.28.0", features = [ "build", "cli" ] }
+
+[lib]
+crate-type = ["cdylib", "staticlib"]
+name = "uniffi_math" # This is our crate name in this tutorial
+
+[[bin]]
+# This can be whatever name makes sense for your project, but the rest of this tutorial assumes uniffi-bindgen.
+name = "uniffi-bindgen"
+path = "uniffi-bindgen.rs"
